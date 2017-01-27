@@ -16,22 +16,11 @@ func ExampleInteger_Expand() {
 
 	fmt.Println(a.Expand())
 
+	a.Step = 3
+
+	fmt.Println(a.Expand())
+
 	// Output:
 	// [0 2 4 6 8 10]
-}
-
-func ExampleFloat_Expand() {
-
-	a := expanding.Float{
-		Min:  0,
-		Max:  1,
-		Step: 0.2,
-	}
-
-	num := len(a.Expand())
-
-	fmt.Println(num)
-
-	// Output:
-	// 6
+	// [0 3 6 9]
 }
